@@ -1,24 +1,17 @@
 <template>
     <div id='app'>
-        <span v-bind:title='message'>
-            <p class='header'>Discord Gacha</p>
-        </span>
+        <v-header></v-header>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
+    import Header from './components/common/header.vue';
+
     export default {
-        data: function() {
-            return {
-                message: 'Coming Soon'
-            }
+        name: 'app',
+        components: {
+            'v-header': Header
         }
     }
 </script>
-
-<style scoped>
-    .header {
-        font-size: 2em;
-        text-align: center;
-    }
-</style>

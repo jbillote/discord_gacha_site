@@ -7,22 +7,23 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
+import router from '../router';
+
 import BootstrapVue from 'bootstrap-vue';
 import Vue from 'vue/dist/vue.esm';
 import App from '../app.vue';
 
-Vue.use(BootstrapVue);
+// Vue.use(BootstrapVue);
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import '../style/main.less'
+
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.appendChild(document.createElement('app'));
     const app = new Vue({
-        el: 'app',
-        data: {
-            message: 'Coming Soon(TM)'
-        },
+        el: '#app',
+        router,
         template: '<App/>',
         components: { App }
     });
