@@ -1,7 +1,6 @@
 <template>
     <div class='text-center'>
         <div v-if='!doneLoading' class='alert alert-info'>Fetching user info...</div>
-        <v-loader ref='loader'></v-loader>
 
         <div v-if='doneLoading && !error' >
             <div class='mb-3'>User info for {{ user.username }}</div>
@@ -20,7 +19,6 @@
 
 <script>
     import Card from '../components/user_info/card.vue';
-    import Loader from '../components/common/loader.vue';
 
     import axios from 'axios';
     import bCard from 'bootstrap-vue/es/components/card/card';
@@ -31,7 +29,6 @@
             'b-card': bCard,
             'v-card': Card,
             'b-form-select': bFormSelect,
-            'v-loader': Loader
         },
 
         data() {
@@ -54,12 +51,10 @@
                 var self = this;
                 axios.get('/api/v1/user/' + this.$route.params.id)
                     .then(function(resp) {
-                        self.$refs.loader.hide();
                         self.doneLoading = true;
                         self.user = resp['data'];
                     }).catch(function(err) {
                         console.log(err);
-                        self.$refs.loader.hide();
                         self.doneLoading = true;
                     });
             },
