@@ -1,3 +1,4 @@
+import Error404 from '../pages/404.vue';
 import Index from '../pages/index.vue';
 import UserInfo from '../pages/user_info.vue';
 import UserLookup from '../pages/user_lookup.vue';
@@ -23,6 +24,11 @@ export default new Router({
             path: '/user/:id',
             name: 'User Info',
             component: UserInfo
+        },
+        {
+            path: '/*',
+            name: '404',
+            component: Error404
         }
     ]
 });
