@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # AWS DynamoDB
 gem 'aws-sdk', '~> 3'
 
+# LogDNA
+gem 'logdna'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
