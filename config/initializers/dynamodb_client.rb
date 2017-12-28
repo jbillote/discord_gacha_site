@@ -1,8 +1,8 @@
 module DynamoDBClient
   def self.init
     @client ||= Aws::DynamoDB::Client.new(
-        access_key_id: "AKIAJOWNVUODCXVVZT3Q",
-        secret_access_key: "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",
+        access_key_id: ENV["AWS_ACCESS_KEY"],
+        secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
         region: "us-west-1"
     )
   end
