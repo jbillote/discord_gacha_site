@@ -37,7 +37,8 @@
                 options: [
                     {value: null, text: 'All Sets'},
                     {value: 'discord_waifus_GBF', text: 'Granblue Fantasy I'},
-                    {value: 'discord_waifus_FE1', text: 'Fire Emblem I'}
+                    {value: 'discord_waifus_FE1', text: 'Fire Emblem I'},
+                    {value: 'discord_gacha_FGO1', text: 'Fate/Grand Order I'}
                 ],
 
                 doneLoading: false,
